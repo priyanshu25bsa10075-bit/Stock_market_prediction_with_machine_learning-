@@ -1,0 +1,23 @@
+Project Report: Stock Price Prediction Using LSTM
+Introduction
+This project involves predicting stock closing prices using a deep learning approach with Long Short-Term Memory (LSTM) networks. LSTM is a type of recurrent neural network that excels at modeling sequential and time-series data by capturing long-term dependencies and temporal patterns.
+
+The stock data used is from Google 
+ collected via Yahoo Finance, spanning from January 1, 2012, to December 21, 2022. The aim is to build a model that can predict future stock prices based on historical trends to assist investors and analysts in making informed decisions.
+
+Data Collection & Preprocessing
+Historical daily closing prices were downloaded using the yfinance library. Moving averages were calculated for 100-day and 200-day windows to analyze overall trend lines.
+
+Data was normalized to a (0,1) range via MinMaxScaler to improve neural network training stability. The data was split into training (80%) and testing (20%) sets. Input sequences consisting of 100 consecutive days of prices were created to train the LSTM model to recognize price patterns.
+
+Model Architecture
+The model is a deep LSTM network composed of four layers with units ranging from 50 to 120, combined with dropout layers (ranging from 0.2 to 0.5) to prevent overfitting. The final layer is a dense neuron that outputs the predicted price.
+
+ReLU activation functions were used within LSTM layers, and the model was compiled with the Adam optimizer and mean squared error loss function. The model was trained for 50 epochs with a batch size of 32.
+
+Results and Evaluation
+After training, the model was evaluated on the test set. Predicted prices closely followed the true closing prices, demonstrating the model's ability to capture temporal dependencies in stock price movement. Performance was visualized with plots comparing original and predicted prices, showing reliable forecasting over the test period.
+
+Conclusion
+This project illustrates the application of LSTM networks for stock price prediction. The model can be adapted for other stocks or expanded with technical indicators and news sentiment for enhanced accuracy. The project serves as a foundation for building AI-driven trading tools leveraging sequential deep learning.
+
