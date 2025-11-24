@@ -1,5 +1,6 @@
 # Stock-market-prediction-with-machine-learning-project
-Author - Reethu yadav 
+Author - Priyanshu Tomar
+
 Welcome to the Stock Market Prediction project! This repository contains a machine learning model to predict stock prices and a user-friendly web application built with Streamlit to interact with the model.
 
 Features
